@@ -10,7 +10,7 @@
 		<form action="#" th:action="@{/addItem}" method="POST"
 			th:object="${item}">
 			<p>Name: <input type="text" th:field="*{name}" required></p>
-			<p>Price ($): <input type="number" th:field="*{price}" required></p>
+			<p>Price ($): <input type="number" th:field="*{price}" step="0.01" min="0" required></p>
 			<p>Location: <select th:field="*{location}">
 					<option th:each="x : ${locations}"
 					th:value="${x}" th:text="${x}">
