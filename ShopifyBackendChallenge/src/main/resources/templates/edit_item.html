@@ -11,7 +11,7 @@
 		<h1>Edit your Item</h1>
 		<form action="#" th:action="@{/updateItem}" method="POST" th:object="${item}">
 			<input type="hidden" th:field="*{id}">
-			<p>Name: <input type="text" th:field=*{name} required></p>
+			<p>Name: <input type="text" th:field=*{name} step="0.01" min="0" required></p>
 			<p>Price ($): <input type="number" th:field=*{price} required></p>
 			<p>Location: <select th:field="*{location}">
 					<option th:each="x : ${locations}"
